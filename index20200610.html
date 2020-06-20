@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有些事现在不做一辈子都不会做了</title>
+    <link rel="stylesheet" href="css/Bootstrap v3.3.4.css">
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap-3.3.4.js"></script>
+</head>
+<body>
+<!--头部起始-->
+<!--导航-->
+<div class="navbar navbar-fixed-top">
+<nav class="navbar navbar-fixed-top my-navbar" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">热爱技术&nbsp;|&nbsp;搬运快乐</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">首页</a></li>
+                <li><a href="#">技术文章</a></li>
+                <li class="dropdown"><a  class="dropdown-toggle" data-toggle="dropdown"  href="#" id="navbardrop" >搬运快乐</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Link 1</a>
+
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav header-right">
+                <li><a href="#">关于我</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</div>
+<!---->
+<!--正文起始-->
+<div class="container">
+<div id="primary" class="content-area">
+
+        <article>
+            <h1>第一台Windows Server 2012 AD域控搭建</h1>
+            <pre>首先https://msdn.itellyou.cn，下载操作系统，然后在VMware虚拟机中新建虚拟机安装系统，安装过程省略。
+<img src="img/AD/AD001.png">
+我这里修改主机名为AD，配置固定IP地址，就可以愉快地进入主题了。
+
+之前几步直接点“下一步”
+
+继续默认“下一步”到下图界面
+
+根据服务器配置等待5-10分钟
+
+然后点击“小旗子”通知信息，点击“将此服务器提升为域控制器”
+
+填写测试环境qwert.local
+
+会有错误提示，因为没有安装DNS服务器
+
+在安装域控服务器时提示“新建域时，本地administrator账户将成域Administrator账户。无法新建域，因为本地administrator账户密码不符合要求。”错误！
+
+解决方法（实测有效）：命令行net user administrator /passwordreq:yes
+
+黄色警告可以忽略（写过代码的会做相同处理/laugh），安装完系统自动重启
+
+登录后，打开服务器管理器，可看到AD相关的工具
+
+至此，第一台AD搭建完成。
+</pre>
+        </article>
+    </main>
+</div>
+</div>
+<!--正文结束-->
+<!--页脚起始-->
+<div class="footer navbar-fixed-bottom">
+    <div class="container">
+        <h5
+                style="text-align: center">Copyright © 2020 by Oldhu's blog.All rights reserved.</h5>
+    </div>
+</div>
+<!--页脚终止-->
+<!--页脚结束-->
+<script>
+    $(window).scroll(function () {
+        if ($(".navbar").offset().top > 50) {$(".navbar-fixed-top").addClass("top-nav");
+        }else {$(".navbar-fixed-top").removeClass("top-nav");}
+    })</script>
+<script type="text/javascript" src="js/canvas-nest.js"></script>
+<script type="text/javascript" src="js/aixin.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>有些事现在不做一辈子都不会做了</title>
+    <link rel="stylesheet" href="css/Bootstrap v3.3.4.css">
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap-3.3.4.js"></script>
+</head>
+<body>
+<!--头部起始-->
+<!--导航-->
+<div class="navbar navbar-fixed-top">
+<nav class="navbar navbar-fixed-top my-navbar" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-list" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">热爱技术&nbsp;|&nbsp;搬运快乐</a>
+        </div>
+        <div class="collapse navbar-collapse"  id="nav-list">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">首页</a></li>
+                <li><a href="article.html">技术文章</a></li>
+                <li class="dropdown"><a  class="dropdown-toggle" data-toggle="dropdown"  href="#" id="navbardrop" >搬运快乐
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="singer2020.html">歌手2020假想篇</a>
+                        <br/>
+                        <a href="tetris.html">点了就别后悔</a>
+                    </div>
+                </li>
+                <li><a href="#">联系我</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</div>
+<!---->
+<div class="row">
+    <div class="col-sm-6 ftr-gd">
+        <div class="image">
+            <img src="./img/text.png">
+        </div>
+    </div>
+    <div class="col-sm-6 ftr-gd">
+        <div class="myweather">
+            <!-- myweather -->
+            <div id="weather-view-he"></div>
+            <script>
+                WIDGET = {ID: 'ZBZz4OagYF'};
+            </script>
+            <script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script>
+        </div>
+    </div>
+        <div class="col-sm-6 ftr-gd">
+            <div class="recommend">
+                <h2 style="text-align: center">推荐内容</h2>
+                <recommend>
+                    <re-head>
+                        <h4><a href="article_20200610_Server2012AD.html">技术文章:第一台Windows Server 2012 AD域控搭建</br></a></h4>
+                    </re-head>
+                    <re-body>
+                        <p>首先打开网站https://msdn.itellyou.cn，下载操作系统，然后在VMware虚拟机中新建虚拟机安装系统...</p>
+                    </re-body>
+                    <br/>
+                    <re-head>
+                        <h4><a href="singer2020.html">搬运快乐:歌手2020假想篇(作者:我晕毛线)</a><br/></h4>
+                    </re-head>
+                    <re-body>
+                        <p>来看华语乐坛神仙打架</p>
+                    </re-body>
+
+                </recommend>
+            </div>
+        </div>
+</div>
+<!--页脚起始-->
+<div class="footer navbar-fixed-bottom">
+    <div class="container">
+        <h5
+                style="text-align: center">Copyright © 2020 by Oldhu's blog.All rights reserved.</h5>
+    </div>
+</div>
+<!--页脚终止-->
+<!--页脚结束-->
+<script>
+    $(window).scroll(function () {
+        if ($(".navbar").offset().top > 50) {$(".navbar-fixed-top").addClass("top-nav");
+        }else {$(".navbar-fixed-top").removeClass("top-nav");}
+    })</script>
+<script>$(document).ready(function(){
+    $(document).off('click.bs.dropdown.data-api');
+});
+$(document).ready(function(){
+    dropdownOpen();//调用
+});
+/**
+ * 鼠标划过就展开子菜单，免得需要点击才能展开
+ */
+function dropdownOpen() {
+
+    var $dropdownLi = $('li.dropdown');
+
+    $dropdownLi.mouseover(function() {
+        $(this).addClass('open');
+    }).mouseout(function() {
+        $(this).removeClass('open');
+    });
+}
+</script>
+
+<script type="text/javascript" src="js/canvas-nest.js"></script>
+<script type="text/javascript" src="js/aixin.js"></script>
+</body>
+</html>
